@@ -54,41 +54,17 @@ namespace :db do
     )
 
     Camera.create(
-      name: "Hikvision Devcam",
-      exid: "hikvision_devcam",
+      name: "Phony Camera",
+      exid: "phony_camera",
       owner_id: user.id,
-      is_public: false,
-      config: {
-        "internal_rtsp_port" => "",
-        "internal_http_port" => "",
-        "internal_host" => "",
-        "external_rtsp_port" => 9101,
-        "external_http_port" => 8101,
-        "external_host" => "5.149.169.19",
-        "snapshots" => {
-          "jpg" => "/Streaming/Channels/1/picture"
-        },
-        "auth" => {
-          "basic" => {
-            "username" => "admin",
-            "password" => "mehcam"
-          }
-        }
-      }
-    )
-
-    Camera.create(
-      name: "Y-cam DevCam",
-      exid: "y_cam_devcam",
-      owner_id: user.id,
-      is_public: false,
+      is_public: true,
       config: {
         "internal_rtsp_port" => "",
         "internal_http_port" => "",
         "internal_host" => "",
         "external_rtsp_port" => "",
-        "external_http_port" => 8013,
-        "external_host" => "5.149.169.19",
+        "external_http_port" => 9000,
+        "external_host" => "127.0.0.1",
         "snapshots" => {
           "jpg" => "/snapshot.jpg"
         },
@@ -101,29 +77,77 @@ namespace :db do
       }
     )
 
-    Camera.create(
-      name: "Evercam Devcam",
-      exid: "evercam-remembrance-camera",
-      owner_id: user.id,
-      is_public: true,
-      config: {
-        "internal_rtsp_port" => 0,
-        "internal_http_port" => 0,
-        "internal_host" => "",
-        "external_rtsp_port" => 90,
-        "external_http_port" => 80,
-        "external_host" => "149.5.38.22",
-        "snapshots" => {
-          "jpg" => "/Streaming/Channels/1/picture"
-        },
-        "auth" => {
-          "basic" => {
-            "username" => "guest",
-            "password" => "guest"
-          }
-        }
-      }
-    )
+    # Camera.create(
+    #   name: "Hikvision Devcam",
+    #   exid: "hikvision_devcam",
+    #   owner_id: user.id,
+    #   is_public: false,
+    #   config: {
+    #     "internal_rtsp_port" => "",
+    #     "internal_http_port" => "",
+    #     "internal_host" => "",
+    #     "external_rtsp_port" => 9101,
+    #     "external_http_port" => 8101,
+    #     "external_host" => "5.149.169.19",
+    #     "snapshots" => {
+    #       "jpg" => "/Streaming/Channels/1/picture"
+    #     },
+    #     "auth" => {
+    #       "basic" => {
+    #         "username" => "admin",
+    #         "password" => "mehcam"
+    #       }
+    #     }
+    #   }
+    # )
+
+    # Camera.create(
+    #   name: "Y-cam DevCam",
+    #   exid: "y_cam_devcam",
+    #   owner_id: user.id,
+    #   is_public: false,
+    #   config: {
+    #     "internal_rtsp_port" => "",
+    #     "internal_http_port" => "",
+    #     "internal_host" => "",
+    #     "external_rtsp_port" => "",
+    #     "external_http_port" => 8013,
+    #     "external_host" => "5.149.169.19",
+    #     "snapshots" => {
+    #       "jpg" => "/snapshot.jpg"
+    #     },
+    #     "auth" => {
+    #       "basic" => {
+    #         "username" => "",
+    #         "password" => ""
+    #       }
+    #     }
+    #   }
+    # )
+
+    # Camera.create(
+    #   name: "Evercam Devcam",
+    #   exid: "evercam-remembrance-camera-0",
+    #   owner_id: user.id,
+    #   is_public: true,
+    #   config: {
+    #     "internal_rtsp_port" => 0,
+    #     "internal_http_port" => 0,
+    #     "internal_host" => "",
+    #     "external_rtsp_port" => 90,
+    #     "external_http_port" => 80,
+    #     "external_host" => "149.5.38.22",
+    #     "snapshots" => {
+    #       "jpg" => "/Streaming/Channels/1/picture"
+    #     },
+    #     "auth" => {
+    #       "basic" => {
+    #         "username" => "guest",
+    #         "password" => "guest"
+    #       }
+    #     }
+    #   }
+    # )
   end
 end
 
@@ -223,12 +247,12 @@ task :import_vendor_models, [:vendorexid] do |t, args|
     SmarterCSV.process(file).each do |vm|
       next if !(vm[:vendor_id].downcase == args[:vendorexid].downcase)
       original_vm = vm.clone
-      
+
       m = VendorModel.where(:exid => vm[:model].to_s).first
-      
+
       # Next if vendor model not found
       next if m.nil?
-      
+
       puts "    M == " + m.exid + ", " + m.name
 
       shape = vm[:shape].nil? ? "" : vm[:shape]

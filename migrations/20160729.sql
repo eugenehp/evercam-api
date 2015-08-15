@@ -10,28 +10,28 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- Name: postgis; Type: EXTENSION; Schema: -; Owner: 
+-- Name: postgis; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 
 
 --
--- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
@@ -44,7 +44,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: access_rights; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_rights; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE access_rights (
@@ -100,7 +100,7 @@ CREATE SEQUENCE sq_access_tokens
 ALTER TABLE public.sq_access_tokens OWNER TO vagrant;
 
 --
--- Name: access_tokens; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_tokens; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE access_tokens (
@@ -120,7 +120,7 @@ CREATE TABLE access_tokens (
 ALTER TABLE public.access_tokens OWNER TO vagrant;
 
 --
--- Name: add_ons; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: add_ons; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE add_ons (
@@ -161,7 +161,7 @@ ALTER SEQUENCE add_ons_id_seq OWNED BY add_ons.id;
 
 
 --
--- Name: apps; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: apps; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE apps (
@@ -198,7 +198,7 @@ ALTER SEQUENCE apps_id_seq OWNED BY apps.id;
 
 
 --
--- Name: archives; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: archives; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE archives (
@@ -240,7 +240,7 @@ ALTER SEQUENCE archives_id_seq OWNED BY archives.id;
 
 
 --
--- Name: camera_activities; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_activities; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE camera_activities (
@@ -278,7 +278,7 @@ ALTER SEQUENCE camera_activities_id_seq OWNED BY camera_activities.id;
 
 
 --
--- Name: camera_endpoints; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_endpoints; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE camera_endpoints (
@@ -314,7 +314,7 @@ ALTER SEQUENCE camera_endpoints_id_seq OWNED BY camera_endpoints.id;
 
 
 --
--- Name: camera_share_requests; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_share_requests; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE camera_share_requests (
@@ -355,7 +355,7 @@ ALTER SEQUENCE camera_share_requests_id_seq OWNED BY camera_share_requests.id;
 
 
 --
--- Name: camera_shares; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_shares; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE camera_shares (
@@ -408,7 +408,7 @@ CREATE SEQUENCE sq_streams
 ALTER TABLE public.sq_streams OWNER TO vagrant;
 
 --
--- Name: cameras; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: cameras; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE cameras (
@@ -450,7 +450,7 @@ CREATE SEQUENCE sq_clients
 ALTER TABLE public.sq_clients OWNER TO vagrant;
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: clients; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE clients (
@@ -482,7 +482,7 @@ CREATE SEQUENCE sq_countries
 ALTER TABLE public.sq_countries OWNER TO vagrant;
 
 --
--- Name: countries; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: countries; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE countries (
@@ -497,7 +497,7 @@ CREATE TABLE countries (
 ALTER TABLE public.countries OWNER TO vagrant;
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE schema_migrations (
@@ -508,7 +508,7 @@ CREATE TABLE schema_migrations (
 ALTER TABLE public.schema_migrations OWNER TO vagrant;
 
 --
--- Name: snapshots; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: snapshots; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE snapshots (
@@ -615,7 +615,7 @@ CREATE SEQUENCE sq_vendors
 ALTER TABLE public.sq_vendors OWNER TO vagrant;
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: users; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE users (
@@ -642,7 +642,7 @@ CREATE TABLE users (
 ALTER TABLE public.users OWNER TO vagrant;
 
 --
--- Name: vendor_models; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: vendor_models; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE vendor_models (
@@ -680,7 +680,7 @@ CREATE TABLE vendor_models (
 ALTER TABLE public.vendor_models OWNER TO vagrant;
 
 --
--- Name: vendors; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: vendors; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE vendors (
@@ -696,7 +696,7 @@ CREATE TABLE vendors (
 ALTER TABLE public.vendors OWNER TO vagrant;
 
 --
--- Name: webhooks; Type: TABLE; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: webhooks; Type: TABLE; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE TABLE webhooks (
@@ -1150,7 +1150,7 @@ SELECT pg_catalog.setval('webhooks_id_seq', 1, false);
 
 
 --
--- Name: access_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY access_rights
@@ -1158,7 +1158,7 @@ ALTER TABLE ONLY access_rights
 
 
 --
--- Name: add_ons_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: add_ons_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY add_ons
@@ -1166,7 +1166,7 @@ ALTER TABLE ONLY add_ons
 
 
 --
--- Name: apps_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: apps_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY apps
@@ -1174,7 +1174,7 @@ ALTER TABLE ONLY apps
 
 
 --
--- Name: archives_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: archives_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY archives
@@ -1182,7 +1182,7 @@ ALTER TABLE ONLY archives
 
 
 --
--- Name: camera_activities_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_activities_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY camera_activities
@@ -1190,7 +1190,7 @@ ALTER TABLE ONLY camera_activities
 
 
 --
--- Name: camera_endpoints_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_endpoints_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY camera_endpoints
@@ -1198,7 +1198,7 @@ ALTER TABLE ONLY camera_endpoints
 
 
 --
--- Name: camera_share_requests_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_share_requests_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY camera_share_requests
@@ -1206,7 +1206,7 @@ ALTER TABLE ONLY camera_share_requests
 
 
 --
--- Name: camera_shares_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_shares_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY camera_shares
@@ -1214,7 +1214,7 @@ ALTER TABLE ONLY camera_shares
 
 
 --
--- Name: pk_access_tokens; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_access_tokens; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY access_tokens
@@ -1222,7 +1222,7 @@ ALTER TABLE ONLY access_tokens
 
 
 --
--- Name: pk_clients; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_clients; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY clients
@@ -1230,7 +1230,7 @@ ALTER TABLE ONLY clients
 
 
 --
--- Name: pk_countries; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_countries; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY countries
@@ -1238,7 +1238,7 @@ ALTER TABLE ONLY countries
 
 
 --
--- Name: pk_firmwares; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_firmwares; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY vendor_models
@@ -1246,7 +1246,7 @@ ALTER TABLE ONLY vendor_models
 
 
 --
--- Name: pk_streams; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_streams; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY cameras
@@ -1254,7 +1254,7 @@ ALTER TABLE ONLY cameras
 
 
 --
--- Name: pk_users; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_users; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY users
@@ -1262,7 +1262,7 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: pk_vendors; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: pk_vendors; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY vendors
@@ -1270,7 +1270,7 @@ ALTER TABLE ONLY vendors
 
 
 --
--- Name: schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY schema_migrations
@@ -1278,7 +1278,7 @@ ALTER TABLE ONLY schema_migrations
 
 
 --
--- Name: snapshots_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: snapshots_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY snapshots
@@ -1286,7 +1286,7 @@ ALTER TABLE ONLY snapshots
 
 
 --
--- Name: webhooks_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: webhooks_pkey; Type: CONSTRAINT; Schema: public; Owner: vagrant; Tablespace:
 --
 
 ALTER TABLE ONLY webhooks
@@ -1294,189 +1294,189 @@ ALTER TABLE ONLY webhooks
 
 
 --
--- Name: access_rights_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_rights_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX access_rights_camera_id_index ON access_rights USING btree (camera_id);
 
 
 --
--- Name: access_rights_token_id_camera_id_right_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_rights_token_id_camera_id_right_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX access_rights_token_id_camera_id_right_index ON access_rights USING btree (token_id, camera_id, "right");
 
 
 --
--- Name: access_rights_token_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: access_rights_token_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX access_rights_token_id_index ON access_rights USING btree (token_id);
 
 
 --
--- Name: camera_activities_camera_id_done_at_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_activities_camera_id_done_at_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX camera_activities_camera_id_done_at_index ON camera_activities USING btree (camera_id, done_at);
 
 
 --
--- Name: camera_endpoints_camera_id_scheme_host_port_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_endpoints_camera_id_scheme_host_port_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX camera_endpoints_camera_id_scheme_host_port_index ON camera_endpoints USING btree (camera_id, scheme, host, port);
 
 
 --
--- Name: camera_share_requests_camera_id_email_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_share_requests_camera_id_email_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX camera_share_requests_camera_id_email_index ON camera_share_requests USING btree (camera_id, email);
 
 
 --
--- Name: camera_share_requests_key_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_share_requests_key_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX camera_share_requests_key_index ON camera_share_requests USING btree (key);
 
 
 --
--- Name: camera_shares_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_shares_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX camera_shares_camera_id_index ON camera_shares USING btree (camera_id);
 
 
 --
--- Name: camera_shares_camera_id_user_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_shares_camera_id_user_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX camera_shares_camera_id_user_id_index ON camera_shares USING btree (camera_id, user_id);
 
 
 --
--- Name: camera_shares_user_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: camera_shares_user_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX camera_shares_user_id_index ON camera_shares USING btree (user_id);
 
 
 --
--- Name: cameras_mac_address_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: cameras_mac_address_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX cameras_mac_address_index ON cameras USING btree (mac_address);
 
 
 --
--- Name: ix_access_tokens_grantee_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ix_access_tokens_grantee_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX ix_access_tokens_grantee_id ON access_tokens USING btree (client_id);
 
 
 --
--- Name: ix_access_tokens_grantor_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ix_access_tokens_grantor_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX ix_access_tokens_grantor_id ON access_tokens USING btree (user_id);
 
 
 --
--- Name: ix_firmwares_vendor_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ix_firmwares_vendor_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX ix_firmwares_vendor_id ON vendor_models USING btree (vendor_id);
 
 
 --
--- Name: ix_streams_owner_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ix_streams_owner_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX ix_streams_owner_id ON cameras USING btree (owner_id);
 
 
 --
--- Name: ix_users_country_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ix_users_country_id; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX ix_users_country_id ON users USING btree (country_id);
 
 
 --
--- Name: snapshots_created_at_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: snapshots_created_at_camera_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX snapshots_created_at_camera_id_index ON snapshots USING btree (created_at, camera_id);
 
 
 --
--- Name: users_api_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: users_api_id_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX users_api_id_index ON users USING btree (api_id);
 
 
 --
--- Name: ux_access_tokens_request; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_access_tokens_request; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_access_tokens_request ON access_tokens USING btree (request);
 
 
 --
--- Name: ux_clients_exid; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_clients_exid; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_clients_exid ON clients USING btree (api_id);
 
 
 --
--- Name: ux_countries_iso3166_a2; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_countries_iso3166_a2; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_countries_iso3166_a2 ON countries USING btree (iso3166_a2);
 
 
 --
--- Name: ux_streams_name; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_streams_name; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_streams_name ON cameras USING btree (exid);
 
 
 --
--- Name: ux_users_email; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_users_email; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_users_email ON users USING btree (email);
 
 
 --
--- Name: ux_users_username; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_users_username; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_users_username ON users USING btree (username);
 
 
 --
--- Name: ux_vendors_exid; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: ux_vendors_exid; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX ux_vendors_exid ON vendors USING btree (exid);
 
 
 --
--- Name: vendor_models_exid_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: vendor_models_exid_index; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE UNIQUE INDEX vendor_models_exid_index ON vendor_models USING btree (exid);
 
 
 --
--- Name: vx_vendors_known_macs; Type: INDEX; Schema: public; Owner: vagrant; Tablespace: 
+-- Name: vx_vendors_known_macs; Type: INDEX; Schema: public; Owner: vagrant; Tablespace:
 --
 
 CREATE INDEX vx_vendors_known_macs ON vendors USING gin (known_macs);
@@ -1711,4 +1711,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-

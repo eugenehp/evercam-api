@@ -21,8 +21,7 @@ Sequel.migration do
   end
 
   down do
-    self[:cameras].where(exid: 'evercam-remembrance-camera').delete
+    # self[:cameras].where(exid: 'evercam-remembrance-camera').delete
   end
 
 end
-
